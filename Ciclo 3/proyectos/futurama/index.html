@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!----Cabecera del documento html----->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Cargar css---->
+    <link rel="stylesheet" href="style.css">
+    <title>Futurama</title>
+
+    <!------Importación de CDN bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+    
+    <!---Importar scripts---->
+    <script src="functions.js"></script>
+
+</head>
+
+<!---Cuerpo del documento---->
+
+<body>
+
+    <!-------Contenedor para el filtro de la app------>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="cargarPersonajes()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-----Contiene texto y la imagen principal de la app-->
+    <div id="cabecera">
+        <!-----Contenedor del texto/titulo----->
+        <div id="contTexto">
+            <h1>Futurama</h1>
+            <label>Consulta los personajes</label>
+        </div>
+
+        <!-----Contenedor de la imagen---->
+        <div id="contImg">
+            <img class="flotar"
+                src="https://res.cloudinary.com/dzxqhkyqd/image/upload/v1554871230/planet-express.png" />
+        </div>
+
+    </div>
+
+    <!----Contiene los personajes de la app----->
+    <div id="cuerpo">
+        <!----Tarjeta que representa a un personaje--->
+        <div class="card" style="width: 18rem;">
+            <img id="imgPersonaje" src="https://vignette.wikia.nocookie.net/en.futurama/images/e/e2/Hobos.jpg/revision/latest/scale-to-width-down/350?cb=20111118085946"
+                class="card-img-top imgPersonaje" alt="imagen1">
+            <div class="card-body">
+                <h5 class="card-title">Vagabundos</h5>
+                <label>Profesión: --</label>
+                <br>
+                <label>Especie: --</label>
+                <br>
+                <label>Planeta: --</label>
+                <br>
+                <button type="button" class="btn btn-outline-danger" onclick="eliminar()">Eliminar</button>
+                &nbsp;
+                <button type="button" class="btn btn-outline-primary" onclick="actualizar()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

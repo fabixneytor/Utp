@@ -1,0 +1,80 @@
+#cabecera{
+    background-color: rgb(58, 54, 54);
+    width: 100vw;
+    height: 35vh;
+    overflow: hidden;
+    
+}
+
+body{
+    margin: 0;
+}
+
+
+#filtro{
+    width: 400px;
+    margin: 0 auto;
+    display: grid;/****Estructura dle contenedor*****/
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+}
+
+.item{
+    background-color: rgb(185, 183, 183);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/******Dar estilo al pasar el mouse encima del elemento*******/
+.item:hover{
+    color: rgb(136, 250, 7);
+    background-color: red;
+}
+
+
+/****************Estilo de la cabecera***********/
+#contTexto{
+    width: 50%;
+    float: left;
+    height: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+#contImg{
+    width: 50%;
+    float: right;
+    height: 100%;
+    margin-top: 50px;
+}
+
+/****************Estilo para la imagen de la cabecera**************/
+.flotar{
+    animation: flotarArriba 4s ease-in-out infinite;
+}
+
+/*Construir animación*/
+@keyframes flotarArriba {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/********estilo para el cuerpo*****************/
+#cuerpo{
+    padding: 2rem;
+}
+
+.imgPersonaje{
+    height: 200px;
+    object-fit: contain;
+}
